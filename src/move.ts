@@ -33,8 +33,8 @@ export default function move(list: List, source: string, destination: string): L
   });
 
   if (tempFile) {
-    // since we have a new folders array, and we removed the file from the sourceFolder,
-    // and we have the folder dest index
+    // mutate the newList by assigning the files array of the destination
+    // folder to a new array returned from concat that concats the tempFile and the files array
     newList[destinationIndex].files = newList[destinationIndex].files.concat(tempFile);
   }
 
